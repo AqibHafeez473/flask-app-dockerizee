@@ -43,6 +43,8 @@ docker build -t flask-blog-app .
 # Run the Docker Container
 docker run -p 5000:5000 flask-blog-app
 
+The app will be accessible at http://localhost:5000.
+
 ## to do 
 - improv on the frontend
 - create migration database
