@@ -12,26 +12,36 @@
 - cursor pagination 
 - validate email and password ( avoid duplicate ) 
 
+## Prerequisites
+
+Before you begin, make sure you have the following:
+
+- A Linux system (e.g., Ubuntu)
+- Python 3 and Git installed
+- Docker installed (if you want to use Docker)
+- MySQL (for production setup)
+- SMTP details for password reset functionality
+
+### Docker Installation
+
+Make sure Docker is installed on your system. You can follow the official [Docker installation guide](https://docs.docker.com/engine/install/ubuntu/) to install Docker on Ubuntu.
+
 ## Installations 
 ```sh
 apt-get install python3 git 
 git clone https://github.com/gibran-abdillah/flask-blog-app.git 
 cd flask-blog-app
-pip install -r requirements.txt 
-```
 
-## set up and run your script!
-```
-export FLASK_APP=server.py
-export FLASK_ENV=development 
-flask run 
-```
 
-## Before you deploy this app
-before you start deploy, change your smtp information in config.py so that the reset password function can be useful and if you want to use environment to production, change with your mysql database in config.py 
+### Build the Docker Image
 
-### Demo 
-<a href='http://gatau-ini.herokuapp.com'>http://gatau-ini.herokuapp.com</a>
+To build the Docker image, run the following command:
+
+```bash
+docker build -t flask-blog-app .
+
+# Run the Docker Container
+docker run -p 5000:5000 flask-blog-app
 
 ## to do 
 - improv on the frontend
